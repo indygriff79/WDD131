@@ -38,19 +38,10 @@ h1{
 }
 
 
-#menu-button {
-    background:none;
-    border: none;
-    color: var(--text-light);
-    font-size: 1em;
-    margin-top: 0.5rem;
-}
-
 
 nav ul{
     list-style: none;
     padding: 0;
-    display: none;
 }
 
 nav ul li{
@@ -140,7 +131,6 @@ dialog img{
         align-items: center;
         text-align: left;
     }
-}
 
 
 .menu {
@@ -153,16 +143,9 @@ dialog img{
     display: none;
 }
 
-nav ul{
-    display: flex;
-    gap: 1rem;
-}
-
-#menu-button{
-    display: none;
-}
 
 .gallery {
     grid-template-columns: repeat(3, 1fr);
     }
 
+}

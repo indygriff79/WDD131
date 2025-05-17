@@ -24,9 +24,9 @@ const closeBtn = document.querySelector(".close-viewer");
 
 gallery.addEventListener("click", (event) => {
     const clickImg = event.target.closest("img");
-    if (clickImg) {
-        const src = clickImg.getAttribute("src");
-        const alt = clickImg.getAttribute("alt");
+    if (clickedImg) {
+        const src = clickedImg.getAttribute("src");
+        const alt = clickedImg.getAttribute("alt");
         const fullSrc = src.split("-")[0] + "-full.jpeg";
         viewerImg.setAttribute("src", fullSrc);
         viewerImg.setAttribute("alt", alt);
@@ -40,6 +40,6 @@ closeBtn.addEventListener("click", () =>  {
 
 viewer.addEventListener("click", (event) => {
     if (event.target === viewer) {
-        viewer.closest();
+        viewer.close();
     }
 });
