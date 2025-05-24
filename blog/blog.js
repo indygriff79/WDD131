@@ -25,35 +25,24 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	}
 ];
+const articlesSection = document.getElementById('articles');
 
-const blogContainer = document.getElementById("blog-articles");
 articles.forEach(article => {
-	const articleElem = document.createElement("div");
+  const articleEl = document.createElement('article');
 
-	const meta = document.createElement("div");
-	meta.className = "article-meta";
-	  meta.innerHTML = `
-    <div><strong>Date:</strong> ${article.date}</div>
-    <div><strong>Ages:</strong> ${article.ages}</div>
-    <div><strong>Genre:</strong> ${article.genre}</div>
+  articleEl.innerHTML = `
+    <div class="meta">
+      <time datetime="${article.date}">${new Date(article.date).toDateString()}</time>
+      <div><strong>Ages:</strong> ${article.ages}</div>
+      <div><strong>Genre:</strong> ${article.genre}</div>
+      <div><strong>Rating:</strong> ${article.stars}</div>
+    </div>
+    <div class="content">
+      <h2>${article.title}</h2>
+      <img src="${article.imgSrc}" alt="${article.imgAlt}" />
+      <p>${article.description}</p>
+    </div>
   `;
 
-  const title = document.createElement("div");
-  title.className = "book-title";
-  title.textContent = article.title;
-
-  const img = document.createElement("img");
-  img.src = article.imgSrc;
-  img.alt = article.imgAlt;
-  img.className = "book-cover";
-
-  const description = document.createElement("p");
-  description.textContent = article.description;
-
-  articleElem.appendChild(meta);
-  articleElem.appendChild(title);
-  articleElem.appendChild(img);
-  articleElem.appendChild(description);
-
-  blogContainer.appendChild(articleElem);
+  articlesSection.appendChild(articleEl);
 });
