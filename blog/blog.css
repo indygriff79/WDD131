@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #473144;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Lora", Impact, serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #AF1B3F;
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    background-color: #EFC69B;
+    margin: 1rem 0;
+}
+
+nav li {
+    margin: 0 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+article {
+    border-top: 2px solid #EFC69B;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.article-meta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.book-title {
+    color:#AF1B3F;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.book-cover {
+    max-width: 100%;
+    height: auto;
+}
