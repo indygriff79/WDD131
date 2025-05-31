@@ -1,87 +1,79 @@
-/* Typography and colors */
+/* Base styles */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #473144;
-  margin: 0;
-  background-color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #473144;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  font-family: 'Lora', Impact, serif;
-  text-align: center;
-  color: #AF1B3F;
-  font-size: 3rem;
-  margin: 1rem 0 0.5rem;
+h1, h2 {
+    font-family: 'Lora', serif;
+    color: #AF1B3F;
 }
 
-/* Skip link accessibility */
-.skiptocontent a {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #AF1B3F;
-  color: white;
-  padding: 8px;
-  z-index: 1000;
-  text-decoration: none;
+a {
+    color: #AF1B3F;
+    text-decoration: none;
 }
 
-.skiptocontent a:focus {
-  top: 0;
+a:hover {
+    text-decoration: underline;
 }
 
-/* Navigation styles */
-nav ul {
+/* Header */
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-nav {
   display: grid;
-  grid-template-columns: 80px 80px 80px;
+  grid-template-columns: 100px 100px 100px;
   justify-content: end;
   justify-items: end;
   list-style: none;
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 1rem;
-  border-top: 2px solid #EFC69B;
-  border-bottom: 2px solid #EFC69B;
+  padding: 0;
+  margin: 1rem auto;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  max-width: 600px;
 }
 
-nav li a {
+.main-nav li {
+  padding: 0.5rem;
   font-size: 1.1rem;
-  text-decoration: none;
-  color: #473144;
 }
 
-/* Layout for main content */
-.content-layout {
-  display: grid;
+.content-layout{
+  display:grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
 }
 
-/* Article styles */
-article {
+#articles-container article{
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #EFC69B;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
 }
 
-.meta {
-  font-size: 0.9rem;
-}
-
-.meta time {
-  font-weight: bold;
+.details {
   font-size: 1rem;
+  color: #555;
+}
+
+.details time {
+  font-weight: bold;
+  display: block;
+  font-size: 1.1rem;
 }
 
 .content h2 {
   color: #AF1B3F;
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem;
+  font-family: 'Lora', serif;
+  margin: 0;
 }
 
 .content img {
@@ -90,16 +82,11 @@ article {
   margin: 0.5rem 0;
 }
 
-/* Placeholder aside */
-aside {
-  background: #f7f7f7;
-  padding: 1rem;
-  border: 1px dashed #ccc;
-}
+
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #999;
+    text-align: center;
+    padding: 1rem;
+    background-color: #EFC69B;
+    color: #473144;
 }
