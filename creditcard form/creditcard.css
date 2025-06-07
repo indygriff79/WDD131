@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+}
+
+.form-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-card-form {
+    display: grid;
+    grid-template-areas: 
+        "front"
+        "back"
+        "button";
+    gap: 1rem;
+    width: 320px;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.front {
+    grid-area: front;
+    z-index: 2;
+    position: relative;
+    margin-top: -100px; /* overlap */
+}
+
+.back {
+    grid-area: back;
+    z-index: 1;
+    position: relative;
+    margin-top: -100px; /* overlap */
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    grid-area: button;
+    padding: 0.7rem;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
