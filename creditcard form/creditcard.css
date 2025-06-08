@@ -1,66 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400, 700, 300');
+@import url('https://use.fontawesome.com/f1e0bf0cbc.css');
+
 body {
-    font-family: sans-serif;
-    background: #f5f5f5;
+    font-family: Lato, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 2rem;
-}
-
-.form-container {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;;
 }
 
-.credit-card-form {
-    display: grid;
-    grid-template-areas: 
-        "front"
-        "back"
-        "button";
-    gap: 1rem;
-    width: 320px;
-}
-
-.card {
-    border-radius: 15px;
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    background: white;
-}
-
-.front {
-    grid-area: front;
-    z-index: 2;
-    position: relative;
-    margin-top: -100px; /* overlap */
-}
-
-.back {
-    grid-area: back;
-    z-index: 1;
-    position: relative;
-    margin-top: -100px; /* overlap */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
 }
 
 label {
     display: block;
-    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
-input {
+input[type="text"],
+input[type="number"] {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
 }
 
 button {
-    grid-area: button;
-    padding: 0.7rem;
-    background-color: #4caf50;
+    margin-top: 2rem;
+    background-color: #008CBA;
     color: white;
-    font-weight: bold;
+    padding: 1rem;
+    width: 100%;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #006f98;
+}
+
+#card-success,
+#form-errors {
+    background-color: #f6f6f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#card-success {
+    border-left: 5px solid #28a745;
+    color: #28a745;
+}
+
+#form-errors {
+    border-left: 5px solid #dc3545;
+    color: #dc3545;
+}
+
+#card-success i,
+#form-errors i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#exp-container,
+#cvc-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#exp-container input,
+#cvc-container input {
+    flex: 1;
+}
+
+/*Optional styles for the card icon*/
+#amount {
+    display: block;
+    font-weight:bold;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
