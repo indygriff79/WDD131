@@ -14,10 +14,12 @@
     <h1> Recipe Book</h1>
    </header> 
    <main> 
-    <form class="search-form">
-        <label for="search" class="visually-hidden"> Search Recipes:</label>
-        <input type="text" id="search" placeholder="Find recipes" />
-        </form>
+    <form id="search-form" class="search-form">
+  <label for="search-input" class="visually-hidden">Search Recipes:</label>
+  <input id="search-input" type="text" placeholder="Search recipes..." />
+  <button type="submit">Search</button>
+</form>
+
 
         <section class="recipe-card">
             <img src="images/apple-crisp.jpg" alt="Apple Crisp" class="recipe-image" />
