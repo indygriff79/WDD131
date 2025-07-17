@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fffdf9;
+    color: #381D2A; /*Accent 2 - readable dark plum*/
+}
+
+/*Header */
+header {
+    background-color: #396E94; /*Primary */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*Navigation */
+nav  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+nav a { 
+    color: #E7C24F; /*Secondary */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #A43312; /*Accent 1 - dark red */
+    text-decoration: underline;
+}
+
+/*Home Page Image */
+.main-image {
+    display: block;
+    max-width: 400px;
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 8px;
+}
+
+/*Home Page Content */
+.description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #381D2A; /*Accent 2 - readable dark plum*/
+}
+
+/*Recipe Page Layout */
+.recipe-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+/*Recipe Image */
+.small-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+/*Section text */
+.recipe-page section {
+    flex: 1;
+    color: #381D2A;
+}
+
+/*Print Button */
+#print-btn {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #A43312;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    position:relative;
+    left: 0;
+
+}
+
+#print-btn:hover {
+    background-color: #396E94; /*Primary */
+
+}
